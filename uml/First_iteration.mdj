@@ -650,7 +650,7 @@
 									"font": "Arial;13;0",
 									"left": 351,
 									"top": 164.5,
-									"width": 110,
+									"width": 110.41357421875,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/HDR1Bh9XfyU="
@@ -849,7 +849,7 @@
 									"font": "Arial;13;0",
 									"left": 343.5,
 									"top": 316.5,
-									"width": 112,
+									"width": 112.578125,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/HDScZh+Fl2Y="
@@ -2463,7 +2463,7 @@
 									"font": "Arial;13;0",
 									"left": 336,
 									"top": 212.5,
-									"width": 152,
+									"width": 153.03173828125,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/HD406CghfkQ="
@@ -3933,7 +3933,8 @@
 					"_parent": {
 						"$ref": "AAAAAAFFxl38KT9O4MM="
 					},
-					"name": "Create a new event"
+					"name": "Create a new event",
+					"documentation": "# Event flow\n\n## Main flow\n1. *Admin* selects a **date**\n2. *Admin* introduces two **teams**\n3. *System* adds new **event** for those **date** and **teams**\n\n## Alternative flow\nA3. The written teams are already playing another match on the same day. Event cannot be added.\n\nB3. If *Admin* doesn't provide a valid **date**, the event cannot be added.\n\nC3. If the event **date** is before current day, then the event cannot be added."
 				},
 				{
 					"_type": "UMLUseCase",
@@ -3941,7 +3942,8 @@
 					"_parent": {
 						"$ref": "AAAAAAFFxl38KT9O4MM="
 					},
-					"name": "Set a fee for a question"
+					"name": "Set a fee for a question",
+					"documentation": "# Event flow\n\n## Main flow\n1. *Admin* selects a **date**\n2. *System* displays the **events** of this **date**\n3. *Admin* selects an **event**\n4. *System* displays the **questions** of this **event**\n5. *Admin* selects a **question**\n6. *Admin* sets a **fee** for the **question**\n5. *System* adds the **fee** to the selected **question**\n\n## Alternative flow\nA2. There are no events on this date. Question cannot be selected.\n\nB4. There are no **questions** for this **event**\n\nB5. If *Admin* doesn't provide a **question** or a valid number for **minimum bet**, then question cannot be added.\n\nC5. If the event **date** is before current day, then question cannot be added."
 				}
 			]
 		},
