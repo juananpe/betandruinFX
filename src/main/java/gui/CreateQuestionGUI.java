@@ -98,14 +98,14 @@ public class CreateQuestionGUI extends JFrame {
 		createBtn.setEnabled(false);
 
 		createBtn.addActionListener(new ActionListener() {
-			@Override
+			
 			public void actionPerformed(ActionEvent e) {
 				jButtonCreate_actionPerformed(e);
 			}
 		});
 		closeBtn.setBounds(new Rectangle(275, 275, 130, 30));
 		closeBtn.addActionListener(new ActionListener() {
-			@Override
+			
 			public void actionPerformed(ActionEvent e) {
 				jButtonClose_actionPerformed(e);
 			}
@@ -143,7 +143,7 @@ public class CreateQuestionGUI extends JFrame {
 
 		// Code for JCalendar
 		this.calendar.addPropertyChangeListener(new PropertyChangeListener() {
-			@Override
+			
 			public void propertyChange(PropertyChangeEvent propertychangeevent) {
 				if (propertychangeevent.getPropertyName().equals("locale")) {
 					calendar.setLocale((Locale) propertychangeevent.getNewValue());

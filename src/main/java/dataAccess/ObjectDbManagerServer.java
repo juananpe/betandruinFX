@@ -49,7 +49,7 @@ public class ObjectDbManagerServer extends JDialog {
 		JButton okButton = new JButton("Stop DATA ACCESS");
 		okButton.addActionListener(new ActionListener() {
 
-			@Override
+			
 			public void actionPerformed(ActionEvent e) {
 
 				textArea.append("\nClosing the database... ");

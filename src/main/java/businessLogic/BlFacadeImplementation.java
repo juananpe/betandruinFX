@@ -54,7 +54,6 @@ public class BlFacadeImplementation implements BlFacade {
 	 * @throws EventFinished if current data is after data of the event
 	 * @throws QuestionAlreadyExist if the same question already exists for the event
 	 */
-	@Override
 	@WebMethod
 	public Question createQuestion(Event event, String question, float betMinimum) 
 			throws EventFinished, QuestionAlreadyExist {
@@ -78,7 +77,7 @@ public class BlFacadeImplementation implements BlFacade {
 	 * @param date in which events are retrieved
 	 * @return collection of events
 	 */
-	@Override
+	
 	@WebMethod	
 	public Vector<Event> getEvents(Date date)  {
 		dbManager.open(false);
@@ -94,7 +93,7 @@ public class BlFacadeImplementation implements BlFacade {
 	 * @param date of the month for which days with events want to be retrieved 
 	 * @return collection of dates
 	 */
-	@Override
+
 	@WebMethod
 	public Vector<Date> getEventsMonth(Date date) {
 		dbManager.open(false);

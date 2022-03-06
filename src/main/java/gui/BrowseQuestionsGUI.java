@@ -102,7 +102,7 @@ public class BrowseQuestionsGUI extends JFrame {
 		closeBtn.setBounds(new Rectangle(274, 419, 130, 30));
 
 		closeBtn.addActionListener(new ActionListener() {
-			@Override
+			
 			public void actionPerformed(ActionEvent e) {
 				jButton2_actionPerformed(e);
 			}
@@ -118,7 +118,7 @@ public class BrowseQuestionsGUI extends JFrame {
 		// Code for JCalendar
 		this.calendar.addPropertyChangeListener(new PropertyChangeListener() {
 
-			@Override
+			
 			public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
 
 				if (propertyChangeEvent.getPropertyName().equals("locale")) {

@@ -29,7 +29,7 @@ public class BusinessLogicServer extends JDialog {
 	BlFacade server;
 	String service;
 
-	public BusinessLogicServer() {
+	public BusinessLogicServer() throws Exception {
 		setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
 		setTitle("Business Logic Server");
@@ -49,7 +49,7 @@ public class BusinessLogicServer extends JDialog {
 		JButton okButton = new JButton("Stop BUSINESS LOGIC");
 		okButton.addActionListener(new ActionListener() {
 
-			@Override
+			
 			public void actionPerformed(ActionEvent e) {
 				textArea.append("\nClosing the server... ");	
 				System.exit(1);

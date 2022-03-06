@@ -96,7 +96,7 @@ public class MainGUI extends JFrame {
 		browseQuestionsBtn.setText(ResourceBundle.getBundle("Etiquetas").
 				getString("BrowseQuestions"));
 		browseQuestionsBtn.addActionListener(new java.awt.event.ActionListener() {
-			@Override
+			
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				BrowseQuestionsGUI findQuestionsWindow = new BrowseQuestionsGUI(businessLogic);
 				findQuestionsWindow.setVisible(true);
@@ -109,7 +109,7 @@ public class MainGUI extends JFrame {
 		createQuestionBtn.setText(ResourceBundle.getBundle("Etiquetas").
 				getString("CreateQuestion"));
 		createQuestionBtn.addActionListener(new java.awt.event.ActionListener() {
-			@Override
+			
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				CreateQuestionGUI createQuestionWindow = new CreateQuestionGUI(businessLogic,
 						new Vector<Event>());
@@ -135,7 +135,7 @@ public class MainGUI extends JFrame {
 	private void initializeEuskaraRbtn() {
 		euskaraRbtn = new JRadioButton("Euskara");
 		euskaraRbtn.addActionListener(new ActionListener() {
-			@Override
+			
 			public void actionPerformed(ActionEvent arg0) {
 				Locale.setDefault(new Locale("eus"));
 				System.out.println("Locale: " + Locale.getDefault());
@@ -148,7 +148,7 @@ public class MainGUI extends JFrame {
 	private void initializeCastellanoRbtn() {
 		castellanoRbtn = new JRadioButton("Castellano");
 		castellanoRbtn.addActionListener(new ActionListener() {
-			@Override
+			
 			public void actionPerformed(ActionEvent e) {
 				Locale.setDefault(new Locale("es"));
 				System.out.println("Locale: " + Locale.getDefault());
@@ -161,7 +161,7 @@ public class MainGUI extends JFrame {
 	private void initializeEnglishRbtn() {
 		englishRbtn = new JRadioButton("English");
 		englishRbtn.addActionListener(new ActionListener() {
-			@Override
+			
 			public void actionPerformed(ActionEvent e) {
 				Locale.setDefault(new Locale("en"));
 				System.out.println("Locale: " + Locale.getDefault());
