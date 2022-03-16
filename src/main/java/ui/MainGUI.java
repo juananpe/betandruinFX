@@ -8,7 +8,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
+import uicontrollers.BrowseQuestionsController;
 import uicontrollers.Controller;
+import uicontrollers.MainGUIController;
 
 import java.io.IOException;
 
@@ -22,14 +24,14 @@ public class MainGUI {
     return businessLogic;
   }
 
-  public void setBussinessLogic (BlFacade afi){
+  public void setBusinessLogic (BlFacade afi){
     businessLogic = afi;
   }
 
   public MainGUI(BlFacade bl) {
     Platform.startup( () -> {
       try {
-        setBussinessLogic(bl);
+        setBusinessLogic(bl);
         init(new Stage());
       } catch (IOException e) {
         e.printStackTrace();
@@ -46,6 +48,22 @@ public class MainGUI {
   private Window load(String fxmlfile) throws IOException {
     Window lag = new Window();
     FXMLLoader loader = new FXMLLoader(MainGUI.class.getResource(fxmlfile));
+    loader.setControllerFactory(controllerClass -> {
+
+     if (controllerClass == BrowseQuestionsController.class) {
+        return new BrowseQuestionsController(businessLogic);
+      } else {
+        // default behavior for controllerFactory:
+        try {
+          return controllerClass.getDeclaredConstructor().newInstance();
+        } catch (Exception exc) {
+          exc.printStackTrace();
+          throw new RuntimeException(exc); // fatal, just bail...
+        }
+      }
+
+
+    });
     lag.ui = loader.load();
     ((Controller)loader.getController()).setMainApp(this);
     lag.c = loader.getController();

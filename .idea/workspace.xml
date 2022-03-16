@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a776b500-c47e-446f-8abe-ae114ca114b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/ApplicationLauncher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/BrowseQuestionsGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/BrowseQuestionsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/CreateQuestionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/BrowseQuestions.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/CreateQuestion.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bets.temp" beforeDir="false" afterPath="$PROJECT_DIR$/db/bets.temp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bets.temp$" beforeDir="false" afterPath="$PROJECT_DIR$/db/bets.temp$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uicontrollers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uicontrollers/BrowseQuestionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/BrowseQuestionsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uicontrollers/MainGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/MainGUIController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,6 +208,7 @@
       <workItem from="1646770292555" duration="4894000" />
       <workItem from="1647385034073" duration="2990000" />
       <workItem from="1647426733385" duration="13327000" />
+      <workItem from="1647446726748" duration="6951000" />
     </task>
     <servers />
   </component>
@@ -293,11 +286,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java</url>
           <line>114</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uicontrollers/BrowseQuestionsController.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

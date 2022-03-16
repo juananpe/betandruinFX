@@ -2,6 +2,8 @@ package uicontrollers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import businessLogic.BlFacade;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import ui.MainGUI;
