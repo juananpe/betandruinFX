@@ -5,25 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a776b500-c47e-446f-8abe-ae114ca114b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/JavafxSample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/MainGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/MainGUIController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/MainGUI.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/ApplicationLauncher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/BrowseQuestionsGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/BrowseQuestionsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/CreateQuestionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/BrowseQuestions.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CreateQuestion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bets.temp" beforeDir="false" afterPath="$PROJECT_DIR$/db/bets.temp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bets.temp$" beforeDir="false" afterPath="$PROJECT_DIR$/db/bets.temp$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/jcalendar-1.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/objectdb.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Etiquetas.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Etiquetas_en.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Etiquetas_es.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Etiquetas_eus.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/ConfigXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configuration/ConfigXML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uicontrollers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uicontrollers/MainGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/MainGUIController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -43,6 +40,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -109,7 +114,20 @@
       <recent name="ui" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainGUI">
+  <component name="RunManager" selected="Application.ApplicationLauncher (1)">
+    <configuration name="ApplicationLauncher (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.ApplicationLauncher" />
+      <module name="BetAndRuin22" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApplicationLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.ApplicationLauncher" />
       <module name="BetAndRuin22" />
@@ -123,8 +141,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.HelloApplication" />
+    <configuration name="BrowseQuestionsGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.BrowseQuestionsGUI" />
       <module name="BetAndRuin22" />
       <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
@@ -137,8 +155,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavafxSample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.JavafxSample" />
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.HelloApplication" />
       <module name="BetAndRuin22" />
       <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
@@ -167,16 +185,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.HelloApplication" />
-      <item itemvalue="Application.JavafxSample" />
       <item itemvalue="Application.ApplicationLauncher" />
       <item itemvalue="Application.MainGUI" />
+      <item itemvalue="Application.BrowseQuestionsGUI" />
+      <item itemvalue="Application.ApplicationLauncher (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainGUI" />
+        <item itemvalue="Application.ApplicationLauncher (1)" />
         <item itemvalue="Application.ApplicationLauncher" />
+        <item itemvalue="Application.MainGUI" />
+        <item itemvalue="Application.BrowseQuestionsGUI" />
         <item itemvalue="Application.HelloApplication" />
-        <item itemvalue="Application.JavafxSample" />
       </list>
     </recent_temporary>
   </component>
@@ -195,6 +215,7 @@
       <workItem from="1646737825379" duration="933000" />
       <workItem from="1646770292555" duration="4894000" />
       <workItem from="1647385034073" duration="2990000" />
+      <workItem from="1647426733385" duration="13327000" />
     </task>
     <servers />
   </component>
@@ -244,5 +265,41 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java</url>
+          <line>146</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java</url>
+          <line>149</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uicontrollers/BrowseQuestionsController.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
