@@ -7,14 +7,13 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="405.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uicontrollers.BrowseQuestionsController">
     <children>
         <DatePicker fx:id="datepicker" layoutX="24.0" layoutY="78.0" />
         <Label layoutX="24.0" layoutY="49.0" text="Event Date" />
-        <TableView fx:id="tblEvents" layoutX="232.0" layoutY="78.0" prefHeight="200.0" prefWidth="330.0">
+        <TableView fx:id="tblEvents" layoutX="232.0" layoutY="78.0" onMouseClicked="#clickItem" prefHeight="200.0" prefWidth="330.0">
             <columns>
-                <TableColumn fx:id="ec1" prefWidth="44.0" text="Id" />
+                <TableColumn fx:id="ec1" maxWidth="200.0" minWidth="30.0" prefWidth="200.0" text="Id" />
                 <TableColumn fx:id="ec2" prefWidth="284.0" text="Event" />
             </columns>
             <columnResizePolicy>

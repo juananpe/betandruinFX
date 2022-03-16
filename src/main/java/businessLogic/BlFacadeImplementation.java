@@ -24,7 +24,7 @@ public class BlFacadeImplementation implements BlFacade {
 	DataAccess dbManager;
 	ConfigXML config = ConfigXML.getInstance();
 
-	public BlFacadeImplementation()  {		
+	public BlFacadeImplementation()  {
 		System.out.println("Creating BlFacadeImplementation instance");
 		boolean initialize = config.getDataBaseOpenMode().equals("initialize");
 		dbManager = new DataAccess(initialize);
@@ -40,13 +40,13 @@ public class BlFacadeImplementation implements BlFacade {
 			dam.initializeDB();
 			dam.close();
 		}
-		dbManager = dam;		
+		dbManager = dam;
 	}
 
 
 	/**
 	 * This method creates a question for an event, with a question text and the minimum bet
-	 * 
+	 *
 	 * @param event to which question is added
 	 * @param question text of the question
 	 * @param betMinimum minimum quantity of the bet
@@ -55,7 +55,7 @@ public class BlFacadeImplementation implements BlFacade {
 	 * @throws QuestionAlreadyExist if the same question already exists for the event
 	 */
 	@WebMethod
-	public Question createQuestion(Event event, String question, float betMinimum) 
+	public Question createQuestion(Event event, String question, float betMinimum)
 			throws EventFinished, QuestionAlreadyExist {
 
 		//The minimum bid must be greater than 0
@@ -66,19 +66,19 @@ public class BlFacadeImplementation implements BlFacade {
 			throw new EventFinished(ResourceBundle.getBundle("Etiquetas").
 					getString("ErrorEventHasFinished"));
 
-		qry = dbManager.createQuestion(event, question, betMinimum);		
+		qry = dbManager.createQuestion(event, question, betMinimum);
 		dbManager.close();
 		return qry;
 	}
 
 	/**
-	 * This method invokes the data access to retrieve the events of a given date 
-	 * 
+	 * This method invokes the data access to retrieve the events of a given date
+	 *
 	 * @param date in which events are retrieved
 	 * @return collection of events
 	 */
-	
-	@WebMethod	
+
+	@WebMethod
 	public Vector<Event> getEvents(Date date)  {
 		dbManager.open(false);
 		Vector<Event>  events = dbManager.getEvents(date);
@@ -89,8 +89,8 @@ public class BlFacadeImplementation implements BlFacade {
 
 	/**
 	 * This method invokes the data access to retrieve the dates a month for which there are events
-	 * 
-	 * @param date of the month for which days with events want to be retrieved 
+	 *
+	 * @param date of the month for which days with events want to be retrieved
 	 * @return collection of dates
 	 */
 
@@ -109,8 +109,8 @@ public class BlFacadeImplementation implements BlFacade {
 	/**
 	 * This method invokes the data access to initialize the database with some events and questions.
 	 * It is invoked only when the option "initialize" is declared in the tag dataBaseOpenMode of resources/config.xml file
-	 */	
-	@WebMethod	
+	 */
+	@WebMethod
 	public void initializeBD(){
 		dbManager.open(false);
 		dbManager.initializeDB();

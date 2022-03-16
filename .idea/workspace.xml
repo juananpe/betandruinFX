@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a776b500-c47e-446f-8abe-ae114ca114b1" name="Changes" comment="">
+    <list default="true" id="a776b500-c47e-446f-8abe-ae114ca114b1" name="Changes" comment="Add a factory for managing Controller constructors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bets.temp" beforeDir="false" afterPath="$PROJECT_DIR$/db/bets.temp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bets.temp$" beforeDir="false" afterPath="$PROJECT_DIR$/db/bets.temp$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/BlFacadeImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/BlFacadeImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uicontrollers/BrowseQuestionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/BrowseQuestionsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uicontrollers/MainGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/MainGUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/BrowseQuestions.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/BrowseQuestions.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,8 +106,8 @@
       <recent name="ui" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApplicationLauncher (1)">
-    <configuration name="ApplicationLauncher (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.ApplicationLauncher JavaFX">
+    <configuration name="ApplicationLauncher JavaFX" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="ui.ApplicationLauncher" />
       <module name="BetAndRuin22" />
       <extension name="coverage">
@@ -120,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="ApplicationLauncher SWING" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="gui.ApplicationLauncher" />
       <module name="BetAndRuin22" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui.*" />
+          <option name="PATTERN" value="gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,32 +161,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.MainGUI" />
-      <module name="BetAndRuin22" />
-      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.HelloApplication" />
-      <item itemvalue="Application.ApplicationLauncher" />
-      <item itemvalue="Application.MainGUI" />
       <item itemvalue="Application.BrowseQuestionsGUI" />
-      <item itemvalue="Application.ApplicationLauncher (1)" />
+      <item itemvalue="Application.ApplicationLauncher JavaFX" />
+      <item itemvalue="Application.ApplicationLauncher SWING" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApplicationLauncher (1)" />
+        <item itemvalue="Application.ApplicationLauncher JavaFX" />
+        <item itemvalue="Application.ApplicationLauncher SWING" />
         <item itemvalue="Application.ApplicationLauncher" />
-        <item itemvalue="Application.MainGUI" />
         <item itemvalue="Application.BrowseQuestionsGUI" />
         <item itemvalue="Application.HelloApplication" />
       </list>
@@ -208,8 +193,17 @@
       <workItem from="1646770292555" duration="4894000" />
       <workItem from="1647385034073" duration="2990000" />
       <workItem from="1647426733385" duration="13327000" />
-      <workItem from="1647446726748" duration="6951000" />
+      <workItem from="1647446726748" duration="7401000" />
+      <workItem from="1647462296674" duration="4219000" />
     </task>
+    <task id="LOCAL-00001" summary="Add a factory for managing Controller constructors">
+      <created>1647462098878</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647462098878</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,34 +252,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Add a factory for managing Controller constructors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a factory for managing Controller constructors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java</url>
-          <line>145</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/main/java/businessLogic/BlFacadeImplementation.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java</url>
-          <line>146</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java</url>
-          <line>149</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java</url>
-          <line>115</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/gui/BrowseQuestionsGUI.java</url>
-          <line>114</line>
-          <option name="timeStamp" value="9" />
+          <line>155</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

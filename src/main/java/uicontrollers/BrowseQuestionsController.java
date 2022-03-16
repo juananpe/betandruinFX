@@ -2,6 +2,7 @@ package uicontrollers;
 
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.ZoneId;
 import java.util.*;
@@ -16,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.skin.DatePickerSkin;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
 import ui.MainGUI;
 
@@ -65,12 +67,26 @@ public class BrowseQuestionsController implements Controller {
     }
 
     @FXML
+    void clickItem(MouseEvent event) {
+        tblQuestions.getItems().clear();
+        for (Question q : tblEvents.getSelectionModel().getSelectedItem().getQuestions()){
+            tblQuestions.getItems().add(q);
+        }
+    }
+    @FXML
     void onClose(ActionEvent event) {
 
     }
 
-    private LocalDate convertToLocalDateViaSqlDate(Date dateToConvert) {
-        return new java.sql.Date(dateToConvert.getTime()).toLocalDate();
+    public LocalDate convertToLocalDateViaInstant(Date dateToConvert) {
+        return dateToConvert.toInstant()
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
+    }
+    public Date convertToDate(LocalDate dateToConvert) {
+        return java.util.Date.from(dateToConvert.atStartOfDay()
+                .atZone(ZoneId.systemDefault())
+                .toInstant());
     }
 
     private int getMonthNumber(String monthName) {
@@ -85,7 +101,7 @@ public class BrowseQuestionsController implements Controller {
         Date date = Date.from(localDate.atStartOfDay(defaultZoneId).toInstant());
 
         for (Date day : businessLogic.getEventsMonth(date)) {
-            holidays.add(convertToLocalDateViaSqlDate(day));
+            holidays.add(convertToLocalDateViaInstant(day));
         }
     }
 
@@ -136,19 +152,24 @@ public class BrowseQuestionsController implements Controller {
             }
         });
 
+        datepicker.setOnAction(actionEvent -> {
+
+            tblEvents.getItems().clear();
+
+            Vector<domain.Event> events = businessLogic.getEvents(convertToDate(datepicker.getValue()));
+
+            for (domain.Event ev : events){
+                tblEvents.getItems().add(ev);
+            }
+        });
+
         // load values into table
 
         ec1.setCellValueFactory(new PropertyValueFactory<>("eventNumber"));
         ec2.setCellValueFactory(new PropertyValueFactory<>("description"));
 
-        tblEvents.getItems().add(new Event(1, "Atlético - Athletic", null));
-        tblEvents.getItems().add(new Event(2, "Eibar - Barcelona", null));
-
         qc1.setCellValueFactory(new PropertyValueFactory<>("questionNumber"));
         qc2.setCellValueFactory(new PropertyValueFactory<>("question"));
-
-        tblQuestions.getItems().add(new Question(1, "Who will win the match?", 1.0f, null));
-        tblQuestions.getItems().add(new Question(2, "How many goals will be scored in the match?", 1.0f, null));
 
     }
 
