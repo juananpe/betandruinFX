@@ -1,15 +1,11 @@
 package ui;
 
-
 import businessLogic.BlFacade;
 import businessLogic.BlFacadeImplementation;
 import configuration.ConfigXML;
-import javafx.application.Application;
 
-import javax.swing.*;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
-import java.awt.*;
 import java.net.URL;
 import java.util.Locale;
 

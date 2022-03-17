@@ -45,50 +45,11 @@ public class MainGUIController implements Controller{
         mainGUI.showCreateQuestion();
     }
 
-    @FXML
-    private RadioButton radioEus;
-
-    @FXML
-    private ToggleGroup langGroup;
-
-    @FXML
-    private RadioButton radioEs;
-
-    @FXML
-    private RadioButton radioEn;
-
-    @FXML
-    void changeLang(ActionEvent event) {
-        HashMap<String, String> langs = new HashMap<>(); // English, Castellano, Euskara
-        langs.put("English", "en");
-        langs.put("Castellano", "es");
-        langs.put("Euskara", "eus");
-
-        String selectedLang = ((RadioButton)event.getSource()).getText();
-
-        Locale.setDefault(new Locale(langs.get(selectedLang)));
-        System.out.println("Locale: " + Locale.getDefault());
-        redraw();
-    }
-
-    private void redraw() {
-        selectOptionLbl.setText(ResourceBundle.getBundle("Etiquetas").
-            getString("SelectUseCase"));
-        browseQuestionsBtn.setText(ResourceBundle.getBundle("Etiquetas").
-            getString("BrowseQuestions"));
-        createQuestionBtn.setText(ResourceBundle.getBundle("Etiquetas").
-            getString("CreateQuestion"));
-
-        if (selectOptionLbl.getScene()!=null){
-            Stage stage = ((Stage)selectOptionLbl.getScene().getWindow());
-            stage.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));
-        }
-
-    }
 
     @FXML
     void initialize() {
-      redraw();
+
+
     }
 
     @Override
