@@ -143,6 +143,9 @@ public class CreateQuestionController implements Controller {
 
   @FXML
   void initialize() {
+
+    btnCreateQuestion.setDisable(true);
+
     // only show the text of the event in the combobox (without the id)
     Callback<ListView<Event>, ListCell<Event>> factory = lv -> new ListCell<>() {
       @Override
@@ -203,8 +206,15 @@ public class CreateQuestionController implements Controller {
       oListEvents.setAll(businessLogic.getEvents(Dates.convertToDate(datePicker.getValue())));
 
       comboEvents.setItems(oListEvents);
-      // select first option
-      comboEvents.getSelectionModel().select(0);
+
+      if (comboEvents.getItems().size() == 0)
+        btnCreateQuestion.setDisable(true);
+      else {
+         btnCreateQuestion.setDisable(false);
+        // select first option
+        comboEvents.getSelectionModel().select(0);
+      }
+
     });
 
   }
