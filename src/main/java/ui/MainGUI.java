@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
 import uicontrollers.BrowseQuestionsController;
 import uicontrollers.Controller;
+import uicontrollers.CreateQuestionController;
 import uicontrollers.MainGUIController;
 
 import java.io.IOException;
@@ -19,17 +20,19 @@ public class MainGUI {
   private Window mainLag, createQuestionLag, browseQuestionsLag;
 
   private BlFacade businessLogic;
+  private Stage stage;
+  private Scene scene;
 
-  public BlFacade getBusinessLogic(){
+  public BlFacade getBusinessLogic() {
     return businessLogic;
   }
 
-  public void setBusinessLogic (BlFacade afi){
+  public void setBusinessLogic(BlFacade afi) {
     businessLogic = afi;
   }
 
   public MainGUI(BlFacade bl) {
-    Platform.startup( () -> {
+    Platform.startup(() -> {
       try {
         setBusinessLogic(bl);
         init(new Stage());
@@ -46,12 +49,15 @@ public class MainGUI {
   }
 
   private Window load(String fxmlfile) throws IOException {
-    Window lag = new Window();
+    Window window = new Window();
     FXMLLoader loader = new FXMLLoader(MainGUI.class.getResource(fxmlfile));
     loader.setControllerFactory(controllerClass -> {
 
-     if (controllerClass == BrowseQuestionsController.class) {
+      if (controllerClass == BrowseQuestionsController.class) {
         return new BrowseQuestionsController(businessLogic);
+      }
+      if (controllerClass == CreateQuestionController.class) {
+        return new CreateQuestionController(businessLogic);
       } else {
         // default behavior for controllerFactory:
         try {
@@ -64,41 +70,51 @@ public class MainGUI {
 
 
     });
-    lag.ui = loader.load();
-    ((Controller)loader.getController()).setMainApp(this);
-    lag.c = loader.getController();
-    return lag;
+    window.ui = loader.load();
+    ((Controller) loader.getController()).setMainApp(this);
+    window.c = loader.getController();
+    return window;
   }
 
   public void init(Stage stage) throws IOException {
+
+    this.stage = stage;
+
     mainLag = load("/MainGUI.fxml");
     browseQuestionsLag = load("/BrowseQuestions.fxml");
-    createQuestionLag = load("/CreateQuestion.fxml" );
+    createQuestionLag = load("/CreateQuestion.fxml");
 
-    setupScene(stage, mainLag.ui, "Bet&Ruin Project", 320, 350);
+    showMain();
+
   }
 
 //  public void start(Stage stage) throws IOException {
 //      init(stage);
 //  }
 
-  public void showBrowseQuestions() {
-    Stage stage = new Stage();
-    setupScene(stage, browseQuestionsLag.ui, "Browse Questions", 1000, 500);
 
+  public void showMain(){
+    setupScene(mainLag.ui, "Bet&Ruin Project", 320, 350);
+  }
+
+  public void showBrowseQuestions() {
+    setupScene(browseQuestionsLag.ui, "Browse Questions", 1000, 500);
   }
 
   public void showCreateQuestion() {
-    Stage stage = new Stage();
-    setupScene(stage, createQuestionLag.ui, "Create Question", 550, 400);
-
+    setupScene(createQuestionLag.ui, "Create Question", 550, 400);
   }
 
-  private void setupScene(Stage stage, Parent ui, String title, int width, int height) {
-    Scene scene = new Scene(ui, width, height);
-    scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
+  private void setupScene(Parent ui, String title, int width, int height) {
+    if (scene == null){
+      scene = new Scene(ui, width, height);
+      scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
+      stage.setScene(scene);
+    }
+    stage.setWidth(width);
+    stage.setHeight(height);
     stage.setTitle(title);
-    stage.setScene(scene);
+    scene.setRoot(ui);
     stage.show();
   }
 
