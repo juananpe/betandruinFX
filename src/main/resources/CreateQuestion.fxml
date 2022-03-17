@@ -11,14 +11,14 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uicontrollers.CreateQuestionController">
    <children>
       <DatePicker fx:id="datePicker" layoutX="53.0" layoutY="85.0" />
-      <Label layoutX="53.0" layoutY="60.0" text="Event Date" />
-      <Label layoutX="328.0" layoutY="60.0" text="List of events" />
+      <Label layoutX="53.0" layoutY="60.0" text="%EventDate" />
+      <Label layoutX="328.0" layoutY="60.0" text="%ListEvents" />
       <ComboBox fx:id="comboEvents" layoutX="326.0" layoutY="86.0" prefWidth="150.0" />
-      <Label layoutX="53.0" layoutY="210.0" text="Question" />
-      <Label layoutX="53.0" layoutY="265.0" text="Min Bet" />
+      <Label layoutX="53.0" layoutY="210.0" text="%Question" />
+      <Label layoutX="53.0" layoutY="265.0" text="%MinimumBetPrice" />
       <TextField fx:id="txtQuestion" layoutX="120.0" layoutY="206.0" prefHeight="26.0" prefWidth="359.0" />
       <TextField fx:id="txtMinBet" layoutX="120.0" layoutY="261.0" prefHeight="26.0" prefWidth="106.0" />
-      <Button fx:id="btnCreateQuestion" layoutX="120.0" layoutY="320.0" mnemonicParsing="false" onAction="#createQuestionClick" prefHeight="26.0" prefWidth="130.0" text="Create Question" />
+      <Button fx:id="btnCreateQuestion" layoutX="120.0" layoutY="320.0" mnemonicParsing="false" onAction="#createQuestionClick" prefHeight="26.0" prefWidth="130.0" text="%CreateQuestion" />
       <Button layoutX="310.0" layoutY="321.0" mnemonicParsing="false" onAction="#closeClick" prefHeight="26.0" prefWidth="88.0" text="Close" />
       <Label fx:id="lblErrorQuestion" layoutX="120.0" layoutY="176.0" />
       <Label fx:id="lblErrorMinBet" layoutX="250.0" layoutY="265.0" />

@@ -8,9 +8,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bets.temp" beforeDir="false" afterPath="$PROJECT_DIR$/db/bets.temp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bets.temp$" beforeDir="false" afterPath="$PROJECT_DIR$/db/bets.temp$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/BlFacadeImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/BlFacadeImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uicontrollers/BrowseQuestionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uicontrollers/BrowseQuestionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataAccess/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataAccess/DataAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/CreateQuestionGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/CreateQuestionGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/ApplicationLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/ApplicationLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/MainGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/BrowseQuestions.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/BrowseQuestions.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CreateQuestion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CreateQuestion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Etiquetas.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Etiquetas.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Etiquetas_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Etiquetas_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Etiquetas_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Etiquetas_es.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Etiquetas_eus.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Etiquetas_eus.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +97,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.11764705" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -110,6 +117,7 @@
     <configuration name="ApplicationLauncher JavaFX" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="ui.ApplicationLauncher" />
       <module name="BetAndRuin22" />
+      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ui.*" />
@@ -171,7 +179,6 @@
       <list>
         <item itemvalue="Application.ApplicationLauncher JavaFX" />
         <item itemvalue="Application.ApplicationLauncher SWING" />
-        <item itemvalue="Application.ApplicationLauncher" />
         <item itemvalue="Application.BrowseQuestionsGUI" />
         <item itemvalue="Application.HelloApplication" />
       </list>
@@ -203,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647462098878</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Working BrowseQuestions and CreateQuestion use cases (need to add l10n, though)">
+      <created>1647515116953</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647515116953</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +267,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add a factory for managing Controller constructors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a factory for managing Controller constructors" />
+    <MESSAGE value="Working BrowseQuestions and CreateQuestion use cases (need to add l10n, though)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working BrowseQuestions and CreateQuestion use cases (need to add l10n, though)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

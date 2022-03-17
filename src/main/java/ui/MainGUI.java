@@ -14,6 +14,7 @@ import uicontrollers.CreateQuestionController;
 import uicontrollers.MainGUIController;
 
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 public class MainGUI {
 
@@ -50,7 +51,7 @@ public class MainGUI {
 
   private Window load(String fxmlfile) throws IOException {
     Window window = new Window();
-    FXMLLoader loader = new FXMLLoader(MainGUI.class.getResource(fxmlfile));
+    FXMLLoader loader = new FXMLLoader(MainGUI.class.getResource(fxmlfile), ResourceBundle.getBundle("Etiquetas"));
     loader.setControllerFactory(controllerClass -> {
 
       if (controllerClass == BrowseQuestionsController.class) {
@@ -94,15 +95,15 @@ public class MainGUI {
 
 
   public void showMain(){
-    setupScene(mainLag.ui, "Bet&Ruin Project", 320, 350);
+    setupScene(mainLag.ui, "MainTitle", 320, 350);
   }
 
   public void showBrowseQuestions() {
-    setupScene(browseQuestionsLag.ui, "Browse Questions", 1000, 500);
+    setupScene(browseQuestionsLag.ui, "BrowseQuestions", 1000, 500);
   }
 
   public void showCreateQuestion() {
-    setupScene(createQuestionLag.ui, "Create Question", 550, 400);
+    setupScene(createQuestionLag.ui, "CreateQuestion", 550, 400);
   }
 
   private void setupScene(Parent ui, String title, int width, int height) {
@@ -113,7 +114,7 @@ public class MainGUI {
     }
     stage.setWidth(width);
     stage.setHeight(height);
-    stage.setTitle(title);
+    stage.setTitle(ResourceBundle.getBundle("Etiquetas").getString(title));
     scene.setRoot(ui);
     stage.show();
   }
