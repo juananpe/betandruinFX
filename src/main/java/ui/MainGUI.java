@@ -14,6 +14,7 @@ import uicontrollers.CreateQuestionController;
 import uicontrollers.MainGUIController;
 
 import java.io.IOException;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class MainGUI {
@@ -51,7 +52,7 @@ public class MainGUI {
 
   private Window load(String fxmlfile) throws IOException {
     Window window = new Window();
-    FXMLLoader loader = new FXMLLoader(MainGUI.class.getResource(fxmlfile), ResourceBundle.getBundle("Etiquetas"));
+    FXMLLoader loader = new FXMLLoader(MainGUI.class.getResource(fxmlfile), ResourceBundle.getBundle("Etiquetas", Locale.getDefault()));
     loader.setControllerFactory(controllerClass -> {
 
       if (controllerClass == BrowseQuestionsController.class) {
@@ -114,7 +115,7 @@ public class MainGUI {
     }
     stage.setWidth(width);
     stage.setHeight(height);
-    stage.setTitle(ResourceBundle.getBundle("Etiquetas").getString(title));
+    stage.setTitle(ResourceBundle.getBundle("Etiquetas",Locale.getDefault()).getString(title));
     scene.setRoot(ui);
     stage.show();
   }
