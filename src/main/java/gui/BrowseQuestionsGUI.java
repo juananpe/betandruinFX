@@ -42,7 +42,7 @@ public class BrowseQuestionsGUI extends JFrame {
 			getString("Events"));
 
 	private JButton closeBtn = new JButton(ResourceBundle.getBundle("Etiquetas").
-			getString("Close"));
+			getString("Back"));
 
 	// Code for JCalendar
 	private JCalendar calendar = new JCalendar();

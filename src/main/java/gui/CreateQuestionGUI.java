@@ -58,7 +58,7 @@ public class CreateQuestionGUI extends JFrame {
 	private JScrollPane eventScrollPane = new JScrollPane();
 
 	private JButton createBtn = new JButton(ResourceBundle.getBundle("Etiquetas").getString("CreateQuestion"));
-	private JButton closeBtn = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Close"));
+	private JButton closeBtn = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Back"));
 	private JLabel msgLbl = new JLabel();
 	private JLabel errorLbl = new JLabel();
 
