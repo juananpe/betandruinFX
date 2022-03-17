@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a776b500-c47e-446f-8abe-ae114ca114b1" name="Changes" comment="Add a factory for managing Controller constructors">
+    <list default="true" id="a776b500-c47e-446f-8abe-ae114ca114b1" name="Changes" comment="Default lang: en">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bets.temp" beforeDir="false" afterPath="$PROJECT_DIR$/db/bets.temp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bets.temp$" beforeDir="false" afterPath="$PROJECT_DIR$/db/bets.temp$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataAccess/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataAccess/DataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/CreateQuestionGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/CreateQuestionGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/ApplicationLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/ApplicationLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/BrowseQuestions.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/BrowseQuestions.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CreateQuestion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CreateQuestion.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Etiquetas.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Etiquetas.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Etiquetas_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Etiquetas_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Etiquetas_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Etiquetas_es.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Etiquetas_eus.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Etiquetas_eus.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +208,49 @@
       <option name="project" value="LOCAL" />
       <updated>1647515116953</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add i10n support">
+      <created>1647518169951</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647518169951</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Disable create question button when no events found">
+      <created>1647518795627</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647518795627</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Rename Close as Back">
+      <created>1647519045103</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647519045103</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Delete hello-view.fxml">
+      <created>1647523869324</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647523869324</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Attempt to dynamically change language">
+      <created>1647527045362</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647527045362</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Attempt to dynamically change language">
+      <created>1647527587934</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1647527587934</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +301,12 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add a factory for managing Controller constructors" />
     <MESSAGE value="Working BrowseQuestions and CreateQuestion use cases (need to add l10n, though)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working BrowseQuestions and CreateQuestion use cases (need to add l10n, though)" />
+    <MESSAGE value="Add i10n support" />
+    <MESSAGE value="Disable create question button when no events found" />
+    <MESSAGE value="Rename Close as Back" />
+    <MESSAGE value="Delete hello-view.fxml" />
+    <MESSAGE value="Attempt to dynamically change language" />
+    <option name="LAST_COMMIT_MESSAGE" value="Attempt to dynamically change language" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
