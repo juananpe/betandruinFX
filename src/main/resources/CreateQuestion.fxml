@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -14,10 +13,10 @@
       <Label layoutX="53.0" layoutY="60.0" text="%EventDate" />
       <Label layoutX="328.0" layoutY="60.0" text="%ListEvents" />
       <ComboBox fx:id="comboEvents" layoutX="326.0" layoutY="86.0" prefWidth="150.0" />
-      <Label layoutX="53.0" layoutY="210.0" text="%Question" />
-      <Label layoutX="53.0" layoutY="265.0" text="%MinimumBetPrice" />
-      <TextField fx:id="txtQuestion" layoutX="120.0" layoutY="206.0" prefHeight="26.0" prefWidth="359.0" />
-      <TextField fx:id="txtMinBet" layoutX="120.0" layoutY="261.0" prefHeight="26.0" prefWidth="106.0" />
+      <Label layoutX="67.0" layoutY="212.0" text="%Question" />
+      <Label layoutX="67.0" layoutY="266.0" text="%MinimumBetPrice" />
+      <TextField fx:id="txtQuestion" layoutX="137.0" layoutY="208.0" prefHeight="26.0" prefWidth="359.0" />
+      <TextField fx:id="txtMinBet" layoutX="137.0" layoutY="262.0" prefHeight="26.0" prefWidth="106.0" />
       <Button fx:id="btnCreateQuestion" layoutX="120.0" layoutY="320.0" mnemonicParsing="false" onAction="#createQuestionClick" prefHeight="26.0" prefWidth="130.0" text="%CreateQuestion" />
       <Button layoutX="310.0" layoutY="321.0" mnemonicParsing="false" onAction="#closeClick" prefHeight="26.0" prefWidth="88.0" text="%Back" />
       <Label fx:id="lblErrorQuestion" layoutX="120.0" layoutY="176.0" />
