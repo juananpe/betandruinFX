@@ -62,13 +62,6 @@ public class BrowseQuestionsController implements Controller {
     businessLogic = bl;
   }
 
-  @FXML
-  void clickItem(MouseEvent event) {
-    tblQuestions.getItems().clear();
-    for (Question q : tblEvents.getSelectionModel().getSelectedItem().getQuestions()) {
-      tblQuestions.getItems().add(q);
-    }
-  }
 
   @FXML
   void closeClick(ActionEvent event) {
@@ -92,6 +85,8 @@ public class BrowseQuestionsController implements Controller {
 
   @FXML
   void initialize() {
+
+    setupEventSelection();
 
     setEventsPrePost(LocalDate.now().getYear(), LocalDate.now().getMonth().getValue());
 
@@ -147,6 +142,18 @@ public class BrowseQuestionsController implements Controller {
     qc1.setCellValueFactory(new PropertyValueFactory<>("questionNumber"));
     qc2.setCellValueFactory(new PropertyValueFactory<>("question"));
 
+  }
+
+  private void setupEventSelection() {
+    tblEvents.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+      if (newSelection != null) {
+
+        tblQuestions.getItems().clear();
+        for (Question q : tblEvents.getSelectionModel().getSelectedItem().getQuestions()) {
+          tblQuestions.getItems().add(q);
+        }
+      }
+    });
   }
 
   @Override
