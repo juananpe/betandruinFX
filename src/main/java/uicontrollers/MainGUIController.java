@@ -35,6 +35,14 @@ public class MainGUIController implements Controller{
 
     private MainGUI mainGUI;
 
+    private BlFacade businessLogic;
+
+    public MainGUIController(){};
+
+    public MainGUIController(BlFacade blFacade){
+        businessLogic = blFacade;
+    }
+
     @FXML
     void browseQuestions(ActionEvent event) {
         mainGUI.showBrowseQuestions();

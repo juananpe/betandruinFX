@@ -90,6 +90,16 @@ public class BrowseQuestionsController implements Controller {
 
     setEventsPrePost(LocalDate.now().getYear(), LocalDate.now().getMonth().getValue());
 
+
+    // a date has been chosen, update the combobox of Events
+    datepicker.setOnAction(actionEvent -> {
+      tblEvents.getItems().clear();
+      Vector<domain.Event> events = businessLogic.getEvents(Dates.convertToDate(datepicker.getValue()));
+      for (domain.Event ev : events) {
+        tblEvents.getItems().add(ev);
+      }
+    });
+
     datepicker.setOnMouseClicked(e -> {
       // get a reference to datepicker inner content
       // attach a listener to the  << and >> buttons
@@ -123,15 +133,6 @@ public class BrowseQuestionsController implements Controller {
             }
           }
         };
-      }
-    });
-
-    // a date has been chosen, update the combobox of Events
-    datepicker.setOnAction(actionEvent -> {
-      tblEvents.getItems().clear();
-      Vector<domain.Event> events = businessLogic.getEvents(Dates.convertToDate(datepicker.getValue()));
-      for (domain.Event ev : events) {
-        tblEvents.getItems().add(ev);
       }
     });
 
